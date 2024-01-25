@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
  {% block content %}
+
  <div class="container">
     <div class="row">
         <table class="table">
@@ -8,8 +9,8 @@
                 <tr>
                     <th>id</th>
                     <th>title</th>
-                    <th>image</th>
-                    <th>more details</th>
+                    <th>link</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -22,11 +23,12 @@
                         {{i.title}}
                     </td>
                     <td>
-                        {{i.image}}
+                        {{i.url}}
                     </td>
                     <td>
-                        <a href="{% url 'about' %}">click here</a>
+                        <a href="{% url 'home' %}"> click here</a>
                     </td>
+                   
                 </tr>
                 {% endfor %}
             </tbody>
@@ -35,3 +37,7 @@
  </div>
  
  {% endblock %}
+
+ 
+ 
+
